@@ -1,7 +1,7 @@
 * {
     list-style: none;
     box-sizing: border-box;
-    font-family: Roboto, serif;
+    font-family: Roboto, sans-serif;
     font-size: 10px;
 }
 
@@ -15,4 +15,9 @@ a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+.App {
+    position: relative;
 }

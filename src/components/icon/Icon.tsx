@@ -1,5 +1,5 @@
 import React from 'react';
-import sprite from "../assets/image/sprite.svg";
+import sprite from "../../assets/image/sprite.svg";
 
 type IconPropsType = {
     iconId: string
@@ -8,14 +8,17 @@ type IconPropsType = {
     viewBox?: string
     fill?: string
     stroke?: string
+    strokeWidth?: string
 
 }
 
 export const Icon = (props:IconPropsType) => {
-    const {width, height, viewBox, fill, stroke, iconId} = props
+    const {width, height, viewBox, fill, stroke, iconId, strokeWidth} = props
 
     return (
-        <svg width={width || '36'}
+        <svg
+            strokeWidth={strokeWidth || 'inherit'}
+                       width={width || '36'}
              height={height || '36'}
              viewBox={viewBox || '0 0 36 36'}
              fill={fill || 'none'}

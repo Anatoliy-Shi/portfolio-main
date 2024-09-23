@@ -2,11 +2,14 @@ import React from 'react';
 import {Skills} from '../../components/Skills';
 import {Im} from '../../components/Im';
 import styled from "styled-components";
-import {Icon} from '../../components/Icon';
+import {Icon} from '../../components/icon/Icon';
+import {Wrapper} from "../../components/wrapper/Wrapper";
+import {Container} from "../../components/container/Container";
 
 export const Main = () => {
     return (
-        <>
+        <Container>
+         <Wrapper>
             <MainStyled>
                 <Im/>
                 <PlusStyledPosition>
@@ -26,29 +29,28 @@ export const Main = () => {
                 </EllipseStyledPosition>
             </MainStyled>
             <Skills/>
-        </>
+         </Wrapper>
+        </Container>
     );
 };
 
 const MainStyled = styled.div`
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 120px;
-  margin: 0 120px 50px 120px;
-  height: 510px;
   border-radius: 200px 0 200px 0;
   background: linear-gradient(200deg, rgba(255, 255, 255, 0.5) -6.76%, rgba(0, 71, 255, 0.5) 200%);
   border: 1px solid #fff;
   z-index: 2;
+  margin-bottom: 80px;
 `
 
 const PlusStyledPosition = styled.div`
   position: absolute;
   top: -70px;
-  left: 45%;
+  left: 40%;
   z-index: 1;
 
 `

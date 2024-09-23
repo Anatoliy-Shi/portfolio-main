@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from './Icon';
+import {lightTheme } from '../styles/theme';
+import {Icon} from './icon/Icon';
+
 
 export const Navigate = () => {
     return (
@@ -12,7 +14,7 @@ export const Navigate = () => {
                 <ItemsListStyled>Content</ItemsListStyled>
                 <ItemsListStyled>
                     <ButtonStyled>
-                        <Icon iconId={'moon-switch-theme'}/>
+                        <Icon viewBox={'0 -5 36 36'} iconId={'moon-switch-theme'}/>
                     </ButtonStyled>
                 </ItemsListStyled>
             </ListStyled>
@@ -31,6 +33,7 @@ const ListStyled = styled.ul`
 `
 
 const ItemsListStyled = styled.li`
+  color: ${lightTheme.darkTextColor};
   font-size: 1.6rem;
 `
 

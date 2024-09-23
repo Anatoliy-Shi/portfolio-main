@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import logo from '../../assets/image/logo.png'
 import { Navigate } from '../../components/Navigate';
+import { lightTheme } from '../../styles/theme';
 
 export const Header = () => {
     return (
@@ -17,6 +18,6 @@ const HeaderContent = styled.header`
   justify-content: space-between;
   padding: 35px 35px 0 35px;
   align-items: center;
-  margin-bottom: 70px;
+  background: ${lightTheme.backgroundGradient};
 `
 
