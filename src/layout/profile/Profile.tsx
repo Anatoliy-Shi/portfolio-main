@@ -1,7 +1,7 @@
 import React from 'react';
 import photo from '../../assets/image/qqq.png'
 import styled from "styled-components";
-import {MyName} from "../../components/myName/MyName";
+import {ProfileTitle} from "../../components/profileTitle/ProfileTitle";
 import {Icon} from '../../components/icon/Icon';
 import {Container} from '../../components/container/Container';
 
@@ -18,7 +18,7 @@ export const Profile = () => {
                             <Icon iconId={'instagram'}/>
                             <Icon width={'36'} height={'36'} viewBox={'0 -2 36 36'} iconId={'downloadResume'}/>
                         </SocialStyled>
-                        <MyName name={"Alireza"} family={'Kavousy nezjad'}/>
+                        <ProfileTitle name={"Alireza"} family={'Kavousy nezjad'}/>
                         <ListStyled>
                             <ItemStyled>I was born in Iran-Mashhad</ItemStyled>
                             <ItemStyled>I’m 20 years old</ItemStyled>
@@ -38,9 +38,9 @@ const SectionProfile = styled.section`
   background-image: url(${map});
   background-color: #a6bcfa;
   position: relative;
-  height: 100vh;
+  height: 850px;
   background-repeat: no-repeat;
-  background-position: 40% center;
+  background-position: 25% center;
 `
 
 const DivAlignToBottom = styled.div`
@@ -63,7 +63,10 @@ const AboutStyled = styled.div`
   width: 565px;
   height: 500px;
   border-radius: 75px 0 75px 0;
-  background: linear-gradient(45deg,rgba(255,255,255, 0) -6.76%, rgba(0, 71, 255, 0.5) 100%);
+  //border-radius: 200px 0 200px 0;
+  border: 1px solid #fff;
+  background: linear-gradient(132deg, rgb(160 188 253 / 50%) 0%, rgba(0, 71, 255, 0.05) 100%);
+  backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
   align-items: center;

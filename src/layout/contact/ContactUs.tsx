@@ -38,7 +38,7 @@ export const ContactUs = () => {
 };
 
 const SectionContactUs = styled.section`
-  margin-top: 60px;
+  margin: 0 15px 60px;
 `
 
 const GetInTouchStyled = styled.h3`
@@ -53,13 +53,16 @@ const Container = styled.div`
   gap: 7px;
   margin-bottom: 23px;
 `
-const Form = styled.div``
+const Form = styled.div`
+  
+`
 
 const ContactItems = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 36px;
+  margin: 0 auto;
 `
 
 const Field = styled.input`
@@ -89,6 +92,10 @@ const StyledForm = styled.form`
   box-shadow: 8px 8px 34px 0 rgb(0 0 0 / 32%);;
   background: rgba(255, 255, 255, 1);
   display: flex;
+  
+  @media screen and (max-width: 768px) {
+  flex-direction: column;
+}
 
   textarea {
     resize: none;

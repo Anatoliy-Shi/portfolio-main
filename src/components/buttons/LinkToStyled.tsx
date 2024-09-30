@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import {lightTheme} from "../../styles/theme";
+import { font } from "../font";
 
 interface Link {
-  width?: any
+  width?: string | number
 }
 
 export const LinkToStyled = styled.a<Link>`
@@ -21,5 +22,9 @@ export const LinkToStyled = styled.a<Link>`
   gap: 14px;
   &:hover {
     transform: scale(1.05);
+  }
+  
+  @media screen and (max-width: 620px) {
+    ${font({Fmin: 8, Fmax: 15})};
   }
   `

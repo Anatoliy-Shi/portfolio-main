@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {font} from './font';
 
 
 const SkillProps = {
@@ -7,7 +8,7 @@ const SkillProps = {
     src: 'string'
 }
 
-export const Skill = (props:typeof SkillProps) => {
+export const Skill = (props: typeof SkillProps) => {
     return (
         <SkillsStyledName>{props.title}
             <SkillsStyledImage src={props.src} alt={props.title}/>
@@ -15,7 +16,7 @@ export const Skill = (props:typeof SkillProps) => {
     );
 };
 
-const SkillsStyledName = styled.p`
+export const SkillsStyledName = styled.p`
   position: relative;
   background: rgba(166, 188, 250, 1);
   width: 160px;
@@ -29,9 +30,31 @@ const SkillsStyledName = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    width: 271px;
+    height: 153px;
+  }
+  
+  @media screen and (max-width: 620px) {
+    ${font({Fmin: 16, Fmax: 33})};
+    width: 145px;
+    height: 82px;
+    //margin: 0 auto;
+  }
 `
 
-const SkillsStyledImage = styled.img`
-position: absolute;
+export const SkillsStyledImage = styled.img`
+  position: absolute;
   top: -45px;
+
+  @media screen and (max-width: 768px) {
+    width: 92px;
+    ${font({Fmin: 18, Fmax: 33})};
+  }
+
+  @media screen and (max-width: 620px) {
+    width: 50px;
+    top: -25%
+
 `

@@ -1,5 +1,7 @@
 export const lightTheme = {
     backgroundGradient: 'linear-gradient(to right, #A6BCFA 32.5%, #fff 0%)',
+    backgroundGradientWidthScreenLess1400: 'linear-gradient(to right, #A6BCFA 22.5%, #fff 0%)',
+
     lightTextColor: 'rgba(255, 255, 255, 1)',
     darkTextColor: 'rgba(57, 57, 57, 1)',
     lightAccentColor: 'rgba(166, 188, 250, 1)',
@@ -12,6 +14,8 @@ export const lightTheme = {
 
 export const darkTheme = {
     backgroundGradient: 'linear-gradient(to right, #24335C 32.5%, #222 0%)',
+    backgroundGradientWidthScreenLess1400: 'linear-gradient(to right, #A6BCFA 22.5%, #fff 0%)',
+
     lightTextColor: 'rgba(255, 255, 255, 1)',
     darkTextColor: 'rgba(255, 255, 255, 1)',
     lightAccentColor: 'rgba(36, 51, 92, 1)',

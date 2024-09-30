@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import { Icon } from '../../components/icon/Icon';
-import {lightTheme} from "../../styles/theme";
+import wave from '../../assets/image/wave.png'
 
 export const Footer = () => {
     return (
         <FooterStyled>
-            <Icon height={'153'} viewBox={'0 0 1440 153'} fill={lightTheme.footerBackground} iconId={'wave'} />
-            <Icon height={'120'} viewBox={'0 0 1440 153'} fill={lightTheme.footerBackground} iconId={'wave'} />
             <Copyright>
                 <CodedBy>Coded by Alireza Kavousy nezhad</CodedBy>
                 <Rights>All Rights Reserved 2022<SupStyled>@</SupStyled></Rights>
@@ -19,11 +16,14 @@ export const Footer = () => {
 const Copyright = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 70px;
+  padding-top: 125px;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   color: #fff;
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+  }
 `
 const SupStyled = styled.sup`
   font-family: Inter, sans-serif;
@@ -49,20 +49,14 @@ const Rights = styled.p`
 `
 
 const FooterStyled = styled.footer`
-  position: relative;
-  margin-top: 195px;
+  margin-top: 80px;
+  background-image: url(${wave});
+  height: 240px;
+  background-position: inherit;
 
-  svg:first-child {
-    position: absolute;
-    z-index: -1;
-    bottom: 60px;
-    width: 100%;
-  }
-  svg:nth-child(2) {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    width: 100%;
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+    height: 150px;
   }
 `
 

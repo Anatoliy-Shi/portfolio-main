@@ -26,4 +26,8 @@ const FloatingSlideBarStyled = styled.div`
   justify-content: center;
   gap: 17px;
   z-index: 100;
+  
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
